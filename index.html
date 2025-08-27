@@ -11,70 +11,59 @@
 
 <body>
     <div class="frame">
-        <!-- Top rectangle bar -->
+
+        <!-- Top Navigation Bar -->
         <div class="top-bar">
-            <!-- Logo -->
             <div class="logo"></div>
 
-            <!-- Navigation bar -->
+            <!-- Navbar Links -->
             <div class="navbar">
-                <a href="#">Home</a>
-                <a href="#">Control</a>
-                <a href="#">Detection</a>
-                <a href="#">Camera</a>
+                <a href="#home">Home</a>
+                <a href="#control">Control</a>
+                <a href="#detection">Detection</a>
+                <a href="#camera">Fire</a>
             </div>
         </div>
 
-        <!-- Welcome text -->
-        <div class="welcome-text">
+        <!-- Home Section -->
+        <div class="welcome-text" id="home">
             Welcome Back!<br>
             Nanon
         </div>
 
-        <!-- Gradient title text -->
         <div class="title-text">
             YOUR K10-X
         </div>
 
-        <!-- Gradient rectangle card with image inside -->
+        <!-- Main Card -->
         <div class="card">
             <img src="add (1).png">
         </div>
 
-        <!-- New card2 -->
+        <!-- Card 2 -->
         <div class="card card-2">
-            <!-- Rectangle1 -->
             <div class="rect1">
                 <div class="text1">01</div>
             </div>
-
-            <!-- Rectangle2 -->
             <div class="rect2">
                 <div class="text2">K10-X</div>
                 <div class="text3">ID: A-1234</div>
             </div>
-
-            <!-- Other texts below rectangle1 -->
             <div class="text4">Status: Active</div>
             <div class="text5">Scouting.....</div>
             <div class="text6">Gas: 0%</div>
             <div class="text7">No Warning</div>
         </div>
 
-        <!-- Card3 (same as Card2 but below Card1) -->
+        <!-- Card 3 -->
         <div class="card card-3">
-            <!-- Rectangle1 -->
             <div class="rect1">
                 <div class="text1">02</div>
             </div>
-
-            <!-- Rectangle2 -->
             <div class="rect2">
                 <div class="text2">K10-X</div>
                 <div class="text3">ID: A-1235</div>
             </div>
-
-            <!-- Other texts below rectangle1 -->
             <div class="text4">Status: Active</div>
             <div class="text5">Scouting.....</div>
             <div class="text6">Gas: 0%</div>
@@ -82,7 +71,7 @@
         </div>
 
         <!-- Control Section -->
-        <div class="control-section">
+        <div class="control-section" id="control">
             <div class="text8">Control</div>
             <div class="text9">Controlling</div>
             <div class="text10">ID: A-1234</div>
@@ -92,49 +81,20 @@
             <div class="control-image"></div>
         </div>
 
-        <!-- Control Squares Section -->
-
-        <!-- Square1: Forward -->
-        <div class="control-square square1">
-            <div class="square-img forward"></div>
-        </div>
-
-        <!-- Square2: Left -->
-        <div class="control-square square2">
-            <div class="square-img left"></div>
-        </div>
-
-        <!-- Square3: Stop -->
-        <div class="control-square square3">
-            <div class="square-img stop"></div>
-        </div>
-
-        <!-- Square4: Right -->
-        <div class="control-square square4">
-            <div class="square-img right"></div>
-        </div>
-
-        <!-- Square5: Backward -->
-        <div class="control-square square5">
-            <div class="square-img backward"></div>
-        </div>
-
-        <!-- Square6: Manual -->
-        <div class="control-square square6">
-            <div class="square-text">Manual</div>
-        </div>
-
-        <!-- Square7: Auto -->
-        <div class="control-square square7">
-            <div class="square-text">Auto</div>
-        </div>
+        <!-- Control Buttons -->
+        <div class="control-square square1"><div class="square-img forward"></div></div>
+        <div class="control-square square2"><div class="square-img left"></div></div>
+        <div class="control-square square3"><div class="square-img stop"></div></div>
+        <div class="control-square square4"><div class="square-img right"></div></div>
+        <div class="control-square square5"><div class="square-img backward"></div></div>
+        <div class="control-square square6"><div class="square-text">Manual</div></div>
+        <div class="control-square square7"><div class="square-text">Auto</div></div>
 
         <!-- AI Detection Section -->
-        <div class="ai-section">
-            <!-- Title -->
+        <div class="ai-section" id="detection">
             <div class="ai-title">AI Detection</div>
 
-            <!-- Web Server Box -->
+            <!-- Embedded Web Server Box -->
             <iframe class="web-server-box" src="http://your-web-server-url" frameborder="0"></iframe>
 
             <!-- Status Texts -->
@@ -143,17 +103,10 @@
         </div>
 
         <!-- Fire Detection Section -->
-        <div class="fire-section">
-            <!-- Title -->
+        <div class="fire-section" id="camera">
             <div class="fire-title">Fire Detection</div>
-
-            <!-- HeatMap Label -->
             <div class="heatmap-label">HeatMap</div>
-
-            <!-- HeatMap Image -->
             <div class="heatmap-image"></div>
-
-            <!-- Status Text -->
             <div class="fire-warning">No Warning</div>
 
             <!-- Sensor Readings -->
@@ -163,9 +116,66 @@
                 CO2: 0%
             </div>
         </div>
-
-
     </div>
-</body>
 
+<script>
+    const links = document.querySelectorAll('.navbar a');
+    const topBar = document.querySelector('.top-bar');
+
+    //Add smooth slide transition to top bar
+    topBar.style.transition = 'transform 0.3s ease';
+
+    let lastScroll = 0;
+    let ticking = false;
+
+    //Hide topbar on scroll down, show on scroll up
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                if (currentScroll > lastScroll + 5) {
+                    topBar.style.transform = 'translateY(-100%)'; //hide
+                } else if (currentScroll < lastScroll - 5) {
+                    topBar.style.transform = 'translateY(0)'; //show
+                }
+                lastScroll = currentScroll;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    //Predefined scroll positions (Y offsets for each section)
+    const scrollPositions = {
+        home: 0,
+        control: 655,
+        detection: 1293,
+        camera: 1641
+    };
+
+    //Smooth scroll to section when navbar clicked
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); //stop default anchor jump
+
+            //Update active link
+            links.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+
+            //Extract section ID (e.g. #home → home)
+            const target = this.getAttribute('href').substring(1);
+
+            //Scroll smoothly to target position
+            if (scrollPositions[target] !== undefined) {
+                window.scrollTo({
+                    top: scrollPositions[target],
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
 </html>
