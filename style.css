@@ -1,0 +1,569 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+/* Frame */
+.frame {
+  width: 390px;
+  height: 2200px;
+  background: #ECECEC;
+  border-radius: 0 0 14px 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Top rectangle */
+.top-bar {
+  width: 390px;
+  height: 80px;
+  background: #ECECEC;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  width: 90px;
+  height: 90px;
+  background: url("Mango_Level\ \(1\).png") center/cover no-repeat;
+  border-radius: 10px;
+}
+
+/* Navigation bar */
+.navbar {
+  position: absolute;
+  top: 33px;
+  left: 185px;
+  width: 197px;
+  height: 27px;
+  background: #003DA4;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar a {
+  color: #FFF;
+  font-size: 8px;
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 3px 8px;
+  border-radius: 15px;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Welcome text */
+.welcome-text {
+  position: absolute;
+  top: 95px;
+  left: 15px;
+  color: #003DA4;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Gradient + stroke text */
+.title-text {
+  position: absolute;
+  top: 206px;
+  left: 96px;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+  font-family: 'Poppins', sans-serif;
+
+  background: linear-gradient(90deg, #003DA4 4.07%, #070B66 99.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFF;
+}
+
+/* Card */
+.card {
+  position: absolute;
+  top: 274px;
+  left: 15px;
+  width: 157.5px;
+  height: 200px;
+  border-radius: 10px;
+  border: 7px solid #FFF;
+  background: linear-gradient(90deg, rgba(0, 61, 164, 0.85) 4.07%, rgba(7, 11, 102, 0.85) 99.66%);
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+/* Image inside card */
+.card img {
+  position: absolute;
+  top: 78.75px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background: url("add\ \(1\).png") center/cover  cover no-repeat;
+  border-radius: 8px;
+}
+
+/* Card2 position */
+.card-2 {
+  top: 274px;
+  left: 218px;
+  position: absolute;
+  width: 157.5px;
+  height: 200px;
+  border-radius: 10px;
+  border: 7px solid #FFF;
+  background: linear-gradient(90deg, rgba(0, 61, 164, 0.85) 4.07%, rgba(7, 11, 102, 0.85) 99.66%);
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+/* Rectangle1 */
+.rect1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 3.5px 0 0 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text1 inside rectangle1 */
+.text1 {
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Rectangle2 (top-right) */
+.rect2 {
+  position: absolute;
+  top: 0;
+  left: 60px; /* next to rectangle1 */
+  width: 98px;
+  height: 60px;
+  border-radius: 0 3.5px 0 0;
+  background: #E9E9E9;
+  display: flex;             /* enable flex */
+  flex-direction: column;    /* stack texts vertically */
+  align-items: center;       /* center horizontally */
+  justify-content: center;   /* optional: center vertically */
+  box-sizing: border-box;
+  padding: 5px 0;            /* optional vertical padding */
+}
+
+/* Text2 inside rectangle2 */
+.text2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: normal;
+  background: linear-gradient(90deg, #003DA4 4.07%, #070B66 99.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+}
+
+/* Text3 inside rectangle2 */
+.text3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: normal;
+  background: linear-gradient(90deg, #003DA4 4.07%, #070B66 99.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Texts below rectangle1 */
+.text4 {
+  position: absolute;
+  top: 62px; /* rectangle1 height + 2px gap */
+  left: 5px;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.text5 {
+  position: absolute;
+  top: 82px;
+  left: 5px;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.text6 {
+  position: absolute;
+  top: 102px;
+  left: 5px;
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.text7 {
+  position: absolute;
+  top: 122px;
+  left: 5px;
+  color: #00FF73;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* Card3 position: below Card1 with 31px gap */
+.card-3 {
+  top: calc(274px + 200px + 31px); /* Card1 top + height + 31px gap */
+  left: 15px;                       /* same as Card1 */
+  position: absolute;
+  width: 157.5px;
+  height: 200px;
+  border-radius: 10px;
+  border: 7px solid #FFF;
+  background: linear-gradient(90deg, rgba(0, 61, 164, 0.85) 4.07%, rgba(7, 11, 102, 0.85) 99.66%);
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+/* Text8: Control (centered on X-axis) */
+.text8 {
+  position: absolute;
+  top: 735px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #003DA4;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Text9: Controlling */
+.text9 {
+  position: absolute;
+  top: 793px;
+  left: 15px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Text10: ID */
+.text10 {
+  position: absolute;
+  top: 832px;
+  left: 15px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Text11: Camera */
+.text11 {
+  position: absolute;
+  top: 871px;
+  left: 54px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Text12: Speed */
+.text12 {
+  position: absolute;
+  top: 803px;
+  left: 258px;
+  width: 88px;
+  height: 29px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Text13: 255/255 */
+.text13 {
+  position: absolute;
+  top: 840px;
+  left: 228px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  line-height: normal;
+}
+
+/* Control image without background box */
+.control-image {
+  position: absolute;
+  top: 871px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+  background: url(hide.png) center/cover no-repeat;
+}
+
+/* Common control square styles */
+.control-square {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Square1: Forward */
+.square1 {
+  top: 937px;
+  left: 155px;
+  background: #003DA4;
+}
+.square1 .square-img {
+  width: 50px;
+  height: 50px;
+  background: url(Up.png) center/cover no-repeat;
+}
+
+/* Square2: Left */
+.square2 {
+  top: 1022px;
+  left: 70px;
+  background: #003DA4;
+}
+.square2 .square-img {
+  width: 50px;
+  height: 50px;
+  background: url(left1.png) center/cover no-repeat;
+}
+
+/* Square3: Stop */
+.square3 {
+  top: 1022px;
+  left: 155px;
+  background: rgba(255,0,0,0.7);
+}
+.square3 .square-img {
+  width: 40px;
+  height: 40px;
+  background: url(stop-button.png) center/cover no-repeat;
+}
+
+/* Square4: Right */
+.square4 {
+  top: 1022px;
+  left: 240px;
+  background: #003DA4;
+}
+.square4 .square-img {
+  width: 50px;
+  height: 50px;
+  background: url(right1.png) center/cover no-repeat;
+}
+
+/* Square5: Backward */
+.square5 {
+  top: 1107px;
+  left: 155px;
+  background: #003DA4;
+}
+.square5 .square-img {
+  width: 50px;
+  height: 50px;
+  background: url(down1.png) center/cover no-repeat;
+}
+
+/* Square6: Manual */
+.square6 {
+  top: 1253px;
+  left: 15px;
+  width: 160px;
+  background: linear-gradient(90deg, #003DA4 4.07%, #070B66 99.66%);
+}
+.square6 .square-text {
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* Square7: Auto */
+.square7 {
+  top: 1253px;
+  left: 215px;
+  width: 160px;
+  background: linear-gradient(90deg, #003DA4 4.07%, #070B66 99.66%);
+}
+.square7 .square-text {
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* AI Detection Title */
+.ai-title {
+  position: absolute;
+  top: 1373px;
+  left: 94px;
+  color: #003DA4;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.web-server-box {
+  position: absolute;
+  top: 1441px;
+  left: 41px;
+  width: 315px;
+  height: 200px;
+  border-radius: 10px;
+  border: 7px solid #FFF;
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.20);
+  overflow: hidden;  /* ensures content stays inside rounded corners */
+}
+
+
+/* Text: Scanning */
+.text-scanning {
+  position: absolute;
+  top: 1651px;
+  left: 41px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Text: No Warning */
+.text-warning {
+  position: absolute;
+  top: 1651px;
+  left: 232px;
+  color: #00FF73;
+  text-align: right;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Fire Detection Title */
+.fire-title {
+  position: absolute;
+  top: 1721px;
+  left: 80px;
+  color: #003DA4;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* HeatMap Label */
+.heatmap-label {
+  position: absolute;
+  top: 1779px;
+  left: 15px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* HeatMap Image */
+.heatmap-image {
+  position: absolute;
+  top: 1828px;
+  left: 96px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 7px solid #FFF;
+  background: url(<path-to-image>) center/cover no-repeat;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.20);
+  transform: rotate(-90deg);
+}
+
+/* Fire Status Text */
+.fire-warning {
+  position: absolute;
+  top: 2037px;
+  left: 229px;
+  color: #00FF73;
+  text-align: right;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/* Sensor Readings */
+.fire-sensors {
+  position: absolute;
+  top: 2073px;
+  left: 41px;
+  color: #003DA4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+}
